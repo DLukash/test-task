@@ -139,7 +139,7 @@ def creare_html_histogram(data = None):
     
     #Генеримо HTML для відображення статистики
     fig = make_subplots(rows=2, cols=2,specs=[[{}, {"rowspan": 2}],
-           [{}, None]] ,subplot_titles=("Розподіл ширини речей", "Розподіл ваги речей", "Кількість предметів у коробці"))
+           [{}, None]] ,subplot_titles=("Розподіл ширини речей", "Кількість предметів у коробці", "Розподіл ваги речей"))
 
     histo_width = go.Histogram(histfunc="sum",x=df_width['_id'], xbins={"size": 0.1}, y=df_width['quantity'], name='Ширина (in)')
     histo_weight = go.Histogram(histfunc="sum",x=df_weight['_id'], xbins={"size": 0.1}, y=df_weight['quantity'], name='Вага (pounds)')
